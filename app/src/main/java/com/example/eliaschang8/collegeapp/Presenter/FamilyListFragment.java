@@ -6,8 +6,11 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.eliaschang8.collegeapp.Model.Guardian;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +26,10 @@ public class FamilyListFragment extends ListFragment{
         View root = super.onCreateView(inflater, container, savedInstanceState);
         guardianList = new ArrayList<>();
         populateList();
+
+        FamilyAdapter adapter = new FamilyAdapter(getActivity(), guardianList);
+
+        setListAdapter(adapter);
 
         return root;
     }

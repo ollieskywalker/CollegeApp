@@ -72,7 +72,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void handleResponse(BackendlessUser response) {
                 //Toast.makeText(LoginScreen.this, "Login Success", Toast.LENGTH_SHORT).show();
-
+                progressDialog.cancel();
                 Intent mainIntent = new Intent(LoginScreen.this,MainActivity.class);
                 LoginScreen.this.startActivity(mainIntent);
             }
@@ -80,11 +80,11 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void handleFault(BackendlessFault fault) {
                 Toast.makeText(LoginScreen.this, "" + fault.getMessage(), Toast.LENGTH_SHORT).show();
-                try{
-                    Thread.sleep(4000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try{
+//                    Thread.sleep(4000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         };
     }

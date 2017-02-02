@@ -27,7 +27,7 @@ public class GuardianFragment extends Fragment {
         EditText editLasttName = (EditText)rootView.findViewById(R.id.edit_last);
         EditText editJob = (EditText)rootView.findViewById(R.id.edit_job);
 
-        Guardian g = new Guardian("Guardian", "Parent", 45, "Lawyer");
+        Guardian g = new Guardian("Parent", "Parent", 45, "Lawyer");
 
         editFirstName.setText(""+g.getFirstname());
         editLasttName.setText(""+g.getLastname());
