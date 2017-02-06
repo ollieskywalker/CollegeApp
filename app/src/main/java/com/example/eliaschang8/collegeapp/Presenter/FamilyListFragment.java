@@ -21,13 +21,17 @@ import java.util.List;
 public class FamilyListFragment extends ListFragment{
     private List<Guardian>guardianList;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = super.onCreateView(inflater, container, savedInstanceState);
+
+
+
         guardianList = new ArrayList<>();
         populateList();
 
-        FamilyAdapter adapter = new FamilyAdapter(getActivity(), guardianList);
+        FamilyAdapter adapter = new FamilyAdapter(getActivity() , guardianList);
 
         setListAdapter(adapter);
 
