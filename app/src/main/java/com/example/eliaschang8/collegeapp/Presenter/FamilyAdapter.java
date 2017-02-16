@@ -1,6 +1,7 @@
 package com.example.eliaschang8.collegeapp.Presenter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.List;
 public class FamilyAdapter extends ArrayAdapter<Guardian> {
     public FamilyAdapter(Context context, List<Guardian> objects) {
         super(context, 0, objects);
+        Log.d("LOOK HERE", "DATA LOADED");
     }
 
     @Override
@@ -25,6 +27,7 @@ public class FamilyAdapter extends ArrayAdapter<Guardian> {
 
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.guardian_item, null);
+            Log.d("LOOK HERE", "DATA LOADED");
         }
 
         Guardian guardian = getItem(position);
@@ -37,7 +40,9 @@ public class FamilyAdapter extends ArrayAdapter<Guardian> {
         name.setText(guardian.getFirstname());
         lastName.setText(guardian.getLastname());
         occupation.setText(guardian.getOccupation());
-        age.setText(""+guardian.getAge());
+        age.setText(guardian.getAge());
+
+        Log.d("LOOK HERE", "DATA LOADED");
 
         return convertView;
     }

@@ -7,6 +7,10 @@ public class Guardian extends Person {
     private int age;
     private String occupation;
 
+    public Guardian(){
+
+    }
+
     public Guardian(int age, String occupation) {
         this.age = age;
         this.occupation = occupation;
@@ -32,5 +36,10 @@ public class Guardian extends Person {
 
     public void setOccupation(String occupation) {
         this.occupation = occupation;
+    }
+
+    @Override
+    public String toString(){
+        return this.getFirstname() + "";
     }
 }

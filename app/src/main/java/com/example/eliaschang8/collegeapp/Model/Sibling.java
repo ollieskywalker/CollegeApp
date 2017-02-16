@@ -8,8 +8,7 @@ public class Sibling extends Person {
     private String relationship;
 
     public Sibling(){
-        age = 15;
-        relationship = "Bro";
+
     }
 
     public Sibling(int age, String relationship) {
@@ -38,5 +37,10 @@ public class Sibling extends Person {
 
     public void setRelationship(String relationship) {
         this.relationship = relationship;
+    }
+
+    @Override
+    public String toString(){
+        return this.getFirstname() + "";
     }
 }
